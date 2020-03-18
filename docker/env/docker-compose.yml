@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    image: postgres:10.4-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_DB: db_name
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
